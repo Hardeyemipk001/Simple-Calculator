@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C27B0"
+    android:backgroundTint="#FFC107"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Text View to display our basic heading of "calculator"-->
+
+    <!-- Edit Text View to input the values -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="30dp"
+        android:text="Simple Calculator"
+        android:layout_margin="50dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="30dp"
+
+        />
+
+    <EditText
+        android:id="@+id/num1"
+        android:layout_marginTop="45dp"
+        android:layout_width="364dp"
+        android:layout_height="28dp"
+        android:hint="Enter first value"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:textColorHint="#F44336"
+        android:onClick="clearTextNum1"
+        android:inputType="number" />
+
+    <!-- Edit Text View to input 2nd value-->
+
+    <!-- Text View to display result -->
+    <EditText
+        android:id="@+id/num2"
+        android:layout_width="363dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter second value"
+        android:textColorHint="#F44336"
+        android:background="@android:color/white"
+        android:ems="10"
+        android:inputType="number"
+        android:onClick="clearTextNum2"
+        />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="363dp"
+        android:layout_height="71dp"
+        style="min"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        android:hint="result"
+        android:textColorHint="#F44336"
+        android:textColorLink="#673AB7"
+        android:textSize="25sp"
+        />
+
+    <!-- A button to perform 'sum' operation -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/sum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="doSum"
+            android:text="+" />
+
+        <!-- A button to perform subtraction operation. -->
+
+        <!-- A button to perform division. -->
+
+        <Button
+            android:id="@+id/sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="doSub"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/div"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="doDiv"
+            android:text="/" />
+
+        <!-- A button to perform multiplication. -->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/mul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="doMul"
+            android:text="x" />
+
+        <!-- A button to perform a modulus function. -->
+
+        <!-- A button to perform a power function. -->
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="doMod"
+            android:text="%(mod)" />
+
+        <Button
+            android:id="@+id/pow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:onClick="doPow"
+            android:text="n1^n2" />
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="clear"
+        android:id="@+id/clear"
+        android:onClick="clear"
+        android:backgroundTint="@android:color/holo_red_light"
+        />
+
+</LinearLayout>
